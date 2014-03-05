@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>xxSlider --随意切换、自动切换焦点图</title>
+     <link rel=stylesheet href="style.css" type="text/css" />  
+</head>
+<body>
+<center>
+
+    <div id="sliderContainer">
+        <div id="sliderDiv">
+            <a target="_blank" href="http://www.hhxin.com/" backcolor="red"><img  alt="" src="images/1.jpg" /></a>
+            <a target="_blank" href="http://www.hhxin.com/" backcolor="yellow"><img  alt="" src="images/2.jpg" /></a>
+            <a target="_blank" href="http://www.hhxin.com/" backcolor="olive"><img  alt="" src="images/3.jpg" /></a>
+            <a target="_blank" href="http://www.hhxin.com/" backcolor="green"><img  alt="" src="images/4.jpg" /></a>
+            <a target="_blank" href="http://www.hhxin.com/" backcolor="gray"><img  alt="" src="images/5.jpg" /></a>
+            <a target="_blank" href="http://www.hhxin.com/" backcolor="silver"><img  alt="" src="images/6.jpg" /></a>
+        </div>
+        <div id="sliderNavBtns"></div>
+    </div>
+
+    <hr/>
+    
+    <a href="javascript: void(0);" id="btnSliderPrev">Prev</a>
+    <a href="javascript: void(0);" id="btnSliderNext">Next</a>
+
+</center>
+
+<script type="text/javascript" src="jquery-1.3.2.min.js" ></script>
+<script type="text/javascript" src="jquery.xxSlider.js"></script>
+<script type="text/javascript">
+
+     var options = {
+        initPostion:  1,               //初始化后第一屏显示的焦点图索引, 从0开始
+        autoSlideTime: 3000,                                               //焦点图自动切换时间, 单位毫秒ms
+        autoSlideSort: 'ASC',                                              //自动切换的排序方向, 默认为ASC: 从小到大, 可选值 DESC:从大到小
+        slideOutTime:300,                                                   //焦点图切换出去的动画时间, 单位毫秒ms  
+        slideInTime:300,                                                     //焦点图切换进入的动画时间, 单位毫秒ms  
+        prevBtnID: "btnSliderPrev",                                   //点击后触发上一页的dom元素id
+        nextBtnID: "btnSliderNext" ,                                  //点击后触发下一页的dom元素id
+		slideComplateCallback: function(data){		//每次发生切换动作时候的回调函数, 包含一个参数, 形如: {curIndex: 当前slide的索引, curItem: 当前slide对应的jQuery对象 }
+			var backcolor = data.curItem.attr("backcolor");
+			$("#sliderContainer").css("background-color", backcolor);
+		}                    
+     };
+    $('#sliderDiv').xxSlider(options);
+</script>
+  
+</body>
+</html>

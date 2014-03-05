@@ -1,0 +1,110 @@
+﻿body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0;}
+img{border:0;}
+a{color:#797979;text-decoration:none;font-size:14px;}
+a:hover{color:#ab0036;text-decoration:none;}
+
+a
+{
+    color: #4a4a4a;
+    text-decoration: none;
+}
+a:hover
+{
+    color: #ab0036;
+    text-decoration: none;
+}
+li
+{
+    list-style-type: none;
+}
+
+#sliderContainer
+{
+    width: 688px;
+    height: 390px;
+	padding: 45px;
+    position: relative;
+    z-index: 99;
+    overflow: hidden;
+}
+
+#sliderDiv
+{
+    width: 688px;
+    height: 390px;
+    position: relative;
+    z-index: 99;
+    overflow: hidden;
+}
+
+#sliderDiv a
+{
+    display: block;
+    overflow: hidden;
+}
+#sliderDiv img
+{
+    vertical-align: top !important;
+}
+
+
+#sliderNavBtns
+{
+    position: absolute;
+    bottom: 20px;
+    right: 26px;
+    padding: 0px;
+    z-index: 999999;
+}
+
+#sliderNavBtns ul
+{
+    position: absolute;
+    bottom: 20px;
+    right: 26px;
+    padding: 0px;
+    z-index: 11;
+}
+
+.slider_nav_btns
+{
+    float: left;
+    margin: 1px 0 0 2px;
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    color: #010000;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    background: #d1d1d1;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial;
+    cursor: pointer;
+}
+
+.slider_nav_btns_active{
+    float: left;
+    margin: 1px 0 0 2px;
+    margin-top: 0;
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    background: #BA2451;
+    border: 1px solid #FFF;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial;
+    cursor: pointer;
+}
+
+
+
+
+
+
